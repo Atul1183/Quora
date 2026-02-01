@@ -15,23 +15,24 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
     {
-        id:" uuid.MAX()",
+        id: uuidv4(),
         username: "Atul",
         content: "I Love Coding!"
     },
     {
-        id: " uuid.MAX()",
+        id: uuidv4(),
         username: "Sahil",
         content: "Practice can make you success!"
     },
     {
-        id: " uuid.MAX()",
+        id: uuidv4(),
         username: "Vikas",
         content: "Eat & Sleep!"
     }
 ]
 
-app.get("/posts", (req,res)=>{
+
+app.get("/Quora", (req,res)=>{
     res.render("index.ejs", {posts})
 })
 
@@ -77,5 +78,5 @@ app.delete("/posts/:id",(req,res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log(`Listeing to the port ${port}`)
+    console.log(`Listening to the port ${port}`)
 });
