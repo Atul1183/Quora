@@ -32,7 +32,7 @@ let posts = [
 ]
 
 
-app.get("/Quora", (req,res)=>{
+app.get("/posts", (req,res)=>{
     res.render("index.ejs", {posts})
 })
 
